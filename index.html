@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Mangment System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="crud">
+    <div class="head">
+        <h1>Logo</h1>
+        <p>Store Mangment System</p>
+    </div>
+
+    <div class="input">
+        <input type="text" id="title" placeholder="Title">
+        <div class="price">
+            <input onkeyup="gettotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="gettotal()"  type="text" id="discount" placeholder="discount">
+            <small id="total"></small>
+        </div>
+        <input type="number" id="size" placeholder="Size">
+        <input type="number" id="count" placeholder="Count">
+        <button id="submet">create</button>
+    </div>
+    <div class="output">
+        <div class="searchblock">
+            <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="Search">
+            <div class="btnsearch">
+                <button onclick="getsearchmood(this.id)" id="searchtitle">Search</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>
+<div class="table">
+<table>
+    <tr>
+        <th class="color">id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>discount</th>
+        <th>Total</th>
+        <th>size</th>
+        <th>update</th>
+        <th>delete</th>
+    </tr>
+    <tbody id="tbody"></tbody>
+</table>
+<div id="deleteall"></div>
+</div>
+
+    <script src="js/file.js"></script>
+</body>
+</html>
